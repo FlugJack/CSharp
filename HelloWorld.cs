@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Timers;
 
 namespace HolaMundo
 {
@@ -86,8 +87,63 @@ namespace HolaMundo
                 Console.WriteLine(index);
             }
 
-            
-            
+            foreach (var myIntem in myArray)
+            {
+                Console.WriteLine(myIntem);   
+            }
+
+            foreach (var myIntem in myDictionary)
+            {
+                Console.WriteLine(myIntem);   
+            }
+
+            foreach (var myIntem in mySet)
+            {
+                Console.WriteLine(myIntem);   
+            }
+
+            //Flujos
+
+            if(myInt == 11 && myBool == true)
+            {
+                Console.WriteLine("El valor es 11");
+            }
+            else if(myInt == 12 || myBool == false){
+                Console.WriteLine("El valor es 12");
+            }
+            else{
+                Console.WriteLine("El valor no es 11");
+            }
+
+            MyFuncion();
+            Console.WriteLine(MyFuncionWithReturn(5));
+
+            var MyClass = new MyClass("Johan");
+            MyClass.myName = "FlugJack";
+            Console.WriteLine(MyClass.myName);
+        }
+        //Funciones que no retorna valor 
+
+        static void MyFuncion()
+        {
+            Console.WriteLine("Mi función");
+        }
+
+        //Funcion que retorna valor 
+
+        static int MyFuncionWithReturn(int param)
+        {
+            return 10 + param;
+        }
+
+        class MyClass
+        {
+            public string myName { get;set; }
+
+            public MyClass(string myName)
+            {
+                this.myName = myName;
+            }        
         }
     }
 }
