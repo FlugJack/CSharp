@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace HolaMundo
 {
@@ -48,6 +49,45 @@ namespace HolaMundo
             // myVar = 6; Error
             Console.WriteLine(myVar);
 
+            Console.WriteLine($"El valor de mi entero es {myInt} y el de bool {myBool}");
+
+            //Creacion de Constantes
+
+            const string MyConst = "Mi constante";
+            Console.WriteLine(MyConst);
+
+            //Estructuras
+            var myArray = new string[] {"Johan", "Chan", "FlugJack"};
+            Console.WriteLine(myArray[2]);
+
+            myArray[2] = "36";
+            Console.WriteLine(myArray[2]);
+
+            //Librerias
+
+            var myDictionary = new Dictionary<string, int>
+            {
+                {"FlugJack", 21},
+                {"Balderas", 20},
+                {"Jessyca", 19}
+            };
+
+            Console.WriteLine(myDictionary["Jessyca"]);
+
+            var mySet = new HashSet<String> {"Johan", "Chan", "FlugJack", "FlugJack"};
+           
+            var myTuple = ("Johan", "Chan", "FlugJack");
+            Console.WriteLine(myTuple);
+
+            //Bucles
+
+            for (int index = 0; index < 10; index++)
+            {
+                Console.WriteLine(index);
+            }
+
+            
+            
         }
     }
 }
